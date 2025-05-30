@@ -287,7 +287,7 @@ const WashroomTimer: React.FC<WashroomTimerProps> = ({ gender }) => {
           id={`${gender}-timer-select`}
           className={`border-2 border-teal-300 rounded-lg px-3 py-2 mt-4 bg-white text-teal-800 focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200 ${state.occupied || isLunchTime() ? 'hidden' : ''}`}
         >
-          <option value="120">2 minutes</option>
+          <option value="180">3 minutes</option>
           <option value="300">5 minutes</option>
           <option value="600">10 minutes</option>
           <option value="900">15 minutes</option>
