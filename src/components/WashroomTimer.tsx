@@ -264,7 +264,22 @@ const WashroomTimer: React.FC<WashroomTimerProps> = ({ gender }) => {
         `}
       </style>
       <div className={`bg-gradient-to-br from-teal-50 to-blue-50 p-6 rounded-xl shadow-xl ${gender === 'female' ? 'mt-6' : 'mb-6'} transition-all duration-300 hover:shadow-2xl`}>
-        <h2 className="text-2xl font-bold text-teal-700 capitalize mb-4">{gender} Washroom</h2>
+        <h2 className="text-2xl font-bold text-teal-700 capitalize mb-4 flex items-center justify-between">
+          <span>{gender} Washroom</span>
+          {gender === 'male' ? (
+            <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <circle cx="12" cy="6" r="4"/>
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            </svg>
+          ) : (
+            <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <circle cx="12" cy="8" r="4"/>
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <path d="M12 12v8"/>
+              <path d="M8 16h8"/>
+            </svg>
+          )}
+        </h2>
         <p className={`text-lg font-semibold ${state.occupied ? 'text-red-600 animate-pulse' : 'text-green-600'}`}>
           Status: {state.occupied ? 'Occupied' : 'Unoccupied'}
         </p>
