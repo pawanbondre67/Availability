@@ -17,7 +17,7 @@ interface WashroomState {
   sessionId: string | null;
 }
 
-const DEFAULT_DURATION = 120; // 2 minutes in seconds
+const DEFAULT_DURATION = 180; // 3 minutes in seconds
 const POPUP_TIME = 30; // 30 seconds for modal checks
 const MAX_MODAL_COUNT = 2; // Maximum 2 modal prompts
 
